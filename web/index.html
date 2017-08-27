@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script type="text/javascript" src="http://cdn.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
+<script type="text/javascript" src="http://cdn.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
+<script type="text/javascript" src="image_listener.js"></script>
+
+</head>
+<body>
+  <h1>Image viewer</h1>
+  <div class="col-md-12">
+    <label>Host</label>
+    <input id="hostTextInput" type="text" text="localhost"/>
+    <label>Port</label>
+    <input id="portTextInput" type="number" text="9090" />    
+    <button type="button" onclick="initROS()">Connect</button>
+  </div>
+  <div class="col-md-12">
+    <label>Connection status</label>
+    <p id="connectionStatus"></p>
+  </div>
+  <div class="col-md-12">
+    <label>Image output</label>
+    <p id="imageStatus"></p>
+  </div>
+  <div class="col-md-12">
+    <canvas id="myCanvas" style="border:1px solid #000000;"></canvas>
+  </div>
+</body>
+</html>
