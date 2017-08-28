@@ -6,19 +6,19 @@ This sample app shows how to run a Python ROS node that grabs a sample image and
 
 ## How do I run it?
 
-Go to docker/ directory and change the path of the volume in the Makefile to be the full path of you app/ directory and then run:
+Go to `docker/` directory and change the path of the volume in the Makefile to be the full path of you `app/` directory and then run:
 
-'''
+```
 make run
-'''
+```
 
 Inside the docker image try:
 
-'''
+```
 cd app/
 launch.sh
-'''
+```
 
 ## How can I see the image?
 
-In your favourite web browser try openning the web page and then load 'localhost' as the host and '9090' as the port. Click on 'Connect' and then you should see Leo Messi on the box. The counter should start increasing.
+In your favourite web browser try openning the web page and then load `localhost` as the host and `9090` as the port. Click on `Connect` and then you should see Leo Messi on the box. The counter should start increasing.
