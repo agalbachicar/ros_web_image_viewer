@@ -16,15 +16,15 @@ function initROS() {
   });
 
   ros.on('error', function(error) {
-    var message = 'Error connecting to websocket server.';   
+    var message = 'Error connecting to websocket server.';
     console.log('Error connecting to websocket server: ', error);
-    document.getElementById("connectionStatus").innerHTML = message;    
+    document.getElementById("connectionStatus").innerHTML = message;
   });
 
   ros.on('close', function() {
     var message = 'Connection to websocket server closed.';
     console.log(message);
-    document.getElementById("connectionStatus").innerHTML = message;    
+    document.getElementById("connectionStatus").innerHTML = message;
   });
 
   // Subscribing to a Topic
@@ -40,7 +40,7 @@ function initROS() {
     imageCounter = imageCounter + 1;
     var messageStr = 'Received ' + imageCounter + ' images';
     console.log(messageStr);
-    document.getElementById("imageStatus").innerHTML = messageStr; 
+    document.getElementById("imageStatus").innerHTML = messageStr;
 
     var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
